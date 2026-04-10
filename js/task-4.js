@@ -15,7 +15,7 @@ form.addEventListener("submit", event => {
     alert(`All form fields must be filled in ${missingFields.join(", ")}`);
   } else {
     
-    console.log(`Email:${email}\n Password:${password}`);
+    console.log({email,password});
   form.reset();
   }
   
