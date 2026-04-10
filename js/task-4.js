@@ -1,9 +1,9 @@
 const form = document.querySelector(".login-form");
-form.addEventListener("submit", event => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   const email = event.currentTarget.elements.email.value.trim();
   const password = event.currentTarget.elements.password.value.trim();
-  
+
   const missingFields = [];
   if (email.length === 0) {
     missingFields.push("email");
@@ -14,9 +14,7 @@ form.addEventListener("submit", event => {
   if (missingFields.length > 0) {
     alert(`All form fields must be filled in ${missingFields.join(", ")}`);
   } else {
-    
-    console.log({email,password});
-  form.reset();
+    console.log({ email, password });
+    form.reset();
   }
-  
 });
